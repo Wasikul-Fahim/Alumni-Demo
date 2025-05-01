@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alumni Stories</title>
+</head>
+<body>
+<h3>
+    Here is our brightest minds
+</h3>
+
+<div class="storyBlock">
+    {% for i in alumni_list %}
+        <h3>{{i.name}}</h3><br>
+        <h4>{{i.dob}}</h4><br>
+        <h4>{{i.designation}}</h4><br>
+        <h4>{{i.email}}</h4><br>
+        <h4>{{i.phone}}</h4><br>
+        <h4>{{i.message}}</h4><br>
+    {% endfor %}
+</div>
+
+</body>
+</html>
