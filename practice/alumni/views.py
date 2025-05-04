@@ -1,13 +1,34 @@
-from django.shortcuts import render,redirect
-from django.http import HttpResponse
-from.forms import AlumniForm
+from django.shortcuts import render, redirect
+from .models import *
+from .forms import AlumniForm
 
-def createAlumni(request):
-    if request.method == "POST":
-        form = AlumniForm(request.POST)
+def alumni_profile(request):
+    alumni = Alumni.objects.all()
+    return render(request, 'stories.html', {'alumni': alumni})
+
+
+def create(request):
+    if request.method == 'POST':
+        form = AlumniForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponse('Success')
+            return redirect('/alumni/stories')  # Redirect to the product list page after successful creation
     else:
         form = AlumniForm()
     return render(request, 'form.html', {'form': form})
+
+
+def update(request, p_id):
+    a = Alumni.objects.get(pk=p_id)
+    if request.method == 'POST':
+        form = AlumniForm(request.POST,request.FILES, instance=a)
+        if form.is_valid():
+            form.save()
+            return redirect('/alumni/stories')  # Redirect to the product list page after successful update
+    else:
+        form = AlumniForm(instance=a)
+    return render(request, 'form.html', {'form': form})
+def delete(request,p_id):
+    Alumni.objects.get(pk=p_id).delete()
+    return redirect('/alumni/stories')
+

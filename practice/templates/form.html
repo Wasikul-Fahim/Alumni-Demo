@@ -12,8 +12,10 @@
 <h1>
     Personal Information
 </h1>
-<form method="post">
-    {{form.as_p}}
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
 </form>
 
 

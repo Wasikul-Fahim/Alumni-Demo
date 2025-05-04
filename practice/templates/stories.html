@@ -13,14 +13,24 @@
 </h3>
 
 <div class="storyBlock">
-    {% for i in alumni_list %}
-        <h3>{{i.name}}</h3><br>
-        <h4>{{i.dob}}</h4><br>
-        <h4>{{i.designation}}</h4><br>
-        <h4>{{i.email}}</h4><br>
-        <h4>{{i.phone}}</h4><br>
-        <h4>{{i.message}}</h4><br>
-    {% endfor %}
+    <a href="{% url 'create' %}">Add new alumni story</a> <br><br>
+    {%for i in alumni %}
+        <div>
+            <img src="{{i.photo.url}}" alt="Profile Photo" width="150">
+            <h2>{{ i.name }}</h2>
+            <p>{{ i.title }}</p>
+            <p><strong>Year of Graduation:</strong> {{ i.graduation_year }}</p>
+            <p><strong>Department:</strong> {{ i.department }}, {{ i.university }}</p>
+        </div>
+
+        <div>
+            <blockquote>
+                {{ i.bio }}
+            </blockquote>
+        </div>
+    <a href="{% url 'update' i.id %}">Update</a> <br>
+    <a href="{% url 'delete' i.id %}">Delete</a> <br>
+    {%endfor%}
 </div>
 
 </body>
