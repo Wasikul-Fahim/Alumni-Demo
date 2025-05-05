@@ -5,9 +5,7 @@ from .forms import AlumniForm
 def alumni_profile(request):
     alumni = Alumni.objects.all()
     return render(request, 'stories.html', {'alumni': alumni})
-def alumni_association(request):
-    alumni = Alumni.objects.all()
-    return render(request, 'alumni_association.html', {'alumni': alumni})
+
 def alumni(request):
     alumni = Alumni.objects.all()
     return render(request, 'alumni.html', {'alumni': alumni})
@@ -38,4 +36,9 @@ def update(request, p_id):
 def delete(request,p_id):
     Alumni.objects.get(pk=p_id).delete()
     return redirect('/alumni/stories')
+
+def alumni_association(request):
+    alumni_association =Alumni_Association.objects.all()
+    return render(request, 'alumni_association.html', {'alumni_association': alumni_association})
+
 
