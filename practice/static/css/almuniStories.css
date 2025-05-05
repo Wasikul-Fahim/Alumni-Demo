@@ -1,3 +1,8 @@
+.storyBlock{
+    margin-top: 3%;
+    border-radius: 10px;
+    padding: 10%;
+}
 .glow-paragraph {
   position: relative;
   padding: 1rem 1.5rem;

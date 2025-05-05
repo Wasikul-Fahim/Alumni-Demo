@@ -13,6 +13,7 @@
 .faculty-card {
     width: 100%;
     max-width: 280px;
+    min-height: 520px;
     height: auto;
     display:flex;
     flex-direction: column;
@@ -99,23 +100,30 @@
     margin-top: 10px;
 }
 
-.top-row { display: flex;
+.top-row {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+}
 
-.card-title { font-size: 1.25rem;
+.card-Title {
+    font-size: 1.25rem;
     font-weight: 700;
     margin: 5px;
     color: var(--txt-color);
 }
 
-.card-subtitle {
+.card-Subtitle {
     padding-left: 10px;
     font-size: 0.92rem;
     color: var(--txt-color);
-    margin-left: -2px; }
+    margin-left: 2px;
+}
+
 .citation-count {
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 0.4rem 0.85rem;
     background-color: rgba(240, 230, 255, 0.5);
     border-radius: 1rem;
@@ -123,6 +131,7 @@
     color: var(--txt-color);
     font-size: 0.85rem;
     position: relative; z-index: 1; }
+
 .citation-count::after {
     content: "";
     position: absolute;
@@ -146,30 +155,7 @@
     color: var(--txt-color);
 }
 
-:root {
-    --primary-color: #9896e8;
-    --bg-color: #f7f7ff;
-    --bg-shade: rgba(0, 0, 0, 0.03);
-    --txt-color: #0f091a;
-    --shadow-color: rgba(170, 170, 170, 0.78);
-    --secondary-color: rgba(181, 181, 238, 0.39);
-    /* Add transition for all color changes */
-    transition: background-color 0.3s ease-in-out,
-                color 0.3s ease-in-out,
-                border-color 0.3s ease-in-out;
-}
 
-/* Apply transitions to all elements */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lexend', sans-serif;
-    transition: background-color 0.3s ease-in-out,
-                color 0.3s ease-in-out,
-                border-color 0.3s ease-in-out,
-                box-shadow 0.3s ease-in-out;
-}
 .apply-btn {
     background-color: var(--primary-color);
     color: black !important;  /* Force black */
@@ -191,6 +177,6 @@
 }
 
  .apply-btn {
-        margin-top: 12px;
-        text-align: center;
-    }
+    margin-top: 12px;
+    text-align: center;
+}
