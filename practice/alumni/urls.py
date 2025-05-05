@@ -20,6 +20,8 @@ from . import views
 
 urlpatterns = [
     path('stories/', views.alumni_profile, name='alumni-profile'),
+    path('alumni_association/', views.alumni_association, name='alumni_association'),
+    path('alumni/', views.alumni, name='alumni'),
     path('create', views.create,name='create'),
     path('update<int:p_id>',views.update,name='update'),
     path('delete<int:p_id>',views.delete,name='delete'),

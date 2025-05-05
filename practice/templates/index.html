@@ -1,18 +1,23 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
+{% block title %}Alumni{% endblock %}
+
 {% block head %}
-    {{ block.super }}
-    <link rel="stylesheet" href="{% static 'css/alumniStories.css' %}">
-{% endblock %} %}
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+
+
+{% endblock %}
 
 {% block content %}
-    <div class="banner-global">
-        <h1 class="gradient-text-global">Alumni Stories</h1><br>
-    </div>
-    <div class="storyBlock">
-        <h2>
-            Here is our brightest minds
-        </h2>
-    </div>
+<!-- Banner -->
+<div class="banner-global">
+    <h1 class="gradient-text-global-big-size">Welcome to uap Alumni</h1>
+    <h2 class="gradient-text-global-big-size">Click more to know more</h2>
+</div>
+
 {% endblock %}
+
+
+
+
