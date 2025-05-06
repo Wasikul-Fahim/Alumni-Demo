@@ -177,6 +177,21 @@
   opacity: 0.8;
 }
 
+.apply-button{
+    background-color: var(--primary-color);
+    color: var(--txt-color);
+    border-radius: 30px;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.apply-button:hover {
+    background-color: #6f94c6;
+    color: var(--txt-color);
+    border-radius: 30px;
+    padding: 15px;
+}
+
 @keyframes glowPulse {
   0%, 100% {
     transform: scale(1);

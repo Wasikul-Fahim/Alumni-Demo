@@ -16,7 +16,7 @@
 </div>
 
 <div class="container mt-5">
-    <a href="{% url 'create'%}">Add Alumni Story</a>
+
     {% for i in alumni %}
         <div class="row g-4 mb-5 align-items-center">
             {% if forloop.counter0|divisibleby:2 %}
@@ -65,8 +65,23 @@
             {% endif %}
 
         </div>
-            <a href="{% url 'update' i.id%}">update</a><br>
-            <a href="{% url 'delete' i.id%}">delete</a>
+
+        <div class="container text-center">
+        <ul class="apply-button-list list-unstyled d-flex justify-content-center flex-wrap gap-3">
+            <li><a href="{% url 'update' i.id%}" class="apply-button">update</a></li>
+            <li><a href="{% url 'delete' i.id%}" class="apply-button">delete</a></li>
+        </ul>
+    </div>
+
     {% endfor %}
 </div>
+
+<!--  Button Section (Separate) -->
+<section class="apply-section mt-5">
+    <div class="container text-center">
+        <ul class="apply-button-list list-unstyled d-flex justify-content-center flex-wrap gap-3">
+            <li><a href="{% url 'create'%}" class="apply-button">Add Alumni Story</a></li>
+        </ul>
+    </div>
+</section>
 {% endblock %}
