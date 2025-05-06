@@ -5,6 +5,7 @@
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/als.css' %}">
 
 
 {% endblock %}
@@ -15,6 +16,20 @@
     <h1 class="gradient-text-global-big-size">Welcome to uap Alumni</h1>
     <h2 class="gradient-text-global-big-size">Click more to know more</h2>
 </div>
+
+
+<br>
+
+<!--  Button Section (Separate) -->
+<section class="apply-section mt-5">
+    <div class="container text-center">
+        <ul class="apply-button-list list-unstyled d-flex justify-content-center flex-wrap gap-3">
+            <li><a href="{% url 'alumni' %}" class="apply-button" >Alumni</a></li>
+            <li><a href="{% url 'alumni-profile' %}" class="apply-button" >Alumni Stories</a></li>
+            <li><a href="{% url 'alumni_association' %}" class="apply-button" >Alumni Association</a></li>
+        </ul>
+    </div>
+</section>
 
 {% endblock %}
 

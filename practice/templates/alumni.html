@@ -39,6 +39,13 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="container text-center">
+                <ul class="apply-button-list list-unstyled d-flex justify-content-center flex-wrap gap-3">
+                    <li><a href="{% url 'update' i.id%}" class="apply-btn">update</a></li>
+                    <li><a href="{% url 'delete' i.id%}" class="apply-btn">delete</a></li>
+                </ul>
+                </div>
             </div>
 
         {% if forloop.counter|divisibleby:3 or forloop.last %}
@@ -54,7 +61,6 @@
         <ul class="apply-button-list list-unstyled d-flex justify-content-center flex-wrap gap-3">
             <li><a href="{% url 'alumni-profile' %}" class="apply-btn" >Alumni Stories</a></li>
             <li><a href="{% url 'alumni_association' %}" class="apply-btn" >Alumni Association</a></li>
-
         </ul>
     </div>
 </section>
