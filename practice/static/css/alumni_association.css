@@ -15,19 +15,6 @@ body {
             border-radius: 5px;  /* Slightly round the corners */
         }
 
-        h1 {
-            font-size: 2.5em;
-            margin-top: 50px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            font-size: 1.8em;
-            border-bottom: 2px solid #9896e8;
-            padding-bottom: 5px;
-            color: #5A3E90;
-        }
-
         h3 {
             font-size: 1.2em;
             margin-bottom: 10px;
